@@ -1,0 +1,7 @@
+{
+    "nombre": "String",
+    "correo": "String",
+    "password": "String",
+    "confirmarPassword": "String",
+    "token":"token FCM"
+}
