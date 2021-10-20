@@ -18,7 +18,6 @@ async function crearUsuari(req) {
             result = { respuesta: "fallo la creación, no coincide la contraseña" };
         }
     }
-    console.log(result)
     return result;
 }
 
@@ -34,7 +33,6 @@ async function modificar(req) {
 
 async function validarCuenta(req) {
     var respuesta = await baseDatos.findAccount(req);
-    console.log(respuesta);
 
     if (respuesta != undefined && respuesta.length > 0 && respuesta[0].password === req.password) {
         return ({
@@ -72,7 +70,6 @@ async function recuperar(req) {
 
 async function usuariosTodos() {
     var respuesta = await baseDatos.findAllAccounts();
-    console.log(respuesta);
     if (respuesta != undefined && respuesta.length > 0) {
         return ({
             usuarios: respuesta,

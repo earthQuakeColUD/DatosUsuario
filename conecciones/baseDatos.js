@@ -5,7 +5,6 @@ const SchemaDB = require("../modelosDatos/datosUsuarios");
 //Guardar cuenta nueva
 async function saveDB(req) {
     try {
-        console.log("guardar datos" + req)
         var data = new SchemaDB();
         data.nombre = req.nombre
         data.correo = req.correo
@@ -43,8 +42,6 @@ async function updateAccount(req) {
         }
         response = "exitoso";
     });
-    console.log("respuesta")
-    console.log(response)
     return response;
 }
 
@@ -66,7 +63,6 @@ function DeleteAll() {
                 database.disconectDB();
             }
             if (res) {
-                console.log("repuesta ", res);
                 database.disconectDB();
             }
         });
